@@ -48,7 +48,7 @@ void loop() {
 
   int ldr_status=analogRead(ldr_pin);
 
-  if(ldr_status>=threshold) { //Inicialização do Modo Noturno
+  if(ldr_status<=threshold) { //Inicialização do Modo Noturno
     Serial.print("Modo Noturno: ");
     Serial.println(ldr_status);
     digitalWrite(led_amarelo, HIGH);
